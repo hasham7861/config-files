@@ -1,4 +1,3 @@
-# .vimrc
 
 ## Setup
 - Make sure you have ~/.vimrc file, ideally have it empty
