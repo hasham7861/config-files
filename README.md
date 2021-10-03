@@ -1,3 +1,3 @@
-# .dotfiles
+# config-files
 
-All the dot config here for your macos configs
+common config files for personal use, but feel free to reuse
