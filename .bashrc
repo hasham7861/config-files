@@ -133,11 +133,11 @@ alias python=python3export PATH=/home/nitro/.meteor:$PATH
 #alias for open folder
 alias open=explorer.exe
 
-# informative git status on shell header https://github.com/magicmonty/bash-git-prompt
-if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    source $HOME/.bash-git-prompt/gitprompt.sh
-fi
+# prefix of terminal message
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # add github token for release it
 export GITHUB_TOKEN=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
